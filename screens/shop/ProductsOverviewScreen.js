@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import ProductItem from '../../components/shop/ProductItem';
 
@@ -9,6 +9,7 @@ const ProductsOverviewScreen = props => {
   return (
     <FlatList
       data={products}
+      
       keyExtractor={item => item.id}
       renderItem={itemData => (
         <ProductItem
